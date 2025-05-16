@@ -1,0 +1,20 @@
+# Golang: 通用 I/O 模板 3 - 读取整数
+```go
+func getI() int {
+	sc.Scan()
+	i, e := strconv.Atoi(sc.Text())
+	if e != nil {
+		panic(e)
+	}
+	return i
+}
+
+func getInts(N int) []int {
+	ret := make([]int, N)
+	for i := 0; i < N; i++ {
+		ret[i] = getI()
+	}
+	return ret
+}
+```
+<div class="goplay-container"></div>

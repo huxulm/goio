@@ -1,0 +1,17 @@
+# Golang: 通用 I/O 模板 2 - 打印
+```go
+func out(x ...interface{}) {
+	fmt.Fprintln(wr, x...)
+}
+
+func outSlice[T any](s []T) {
+	if len(s) == 0 {
+		return
+	}
+	for i := 0; i < len(s)-1; i++ {
+		fmt.Fprint(wr, s[i], " ")
+	}
+	fmt.Fprintln(wr, s[len(s)-1])
+}
+```
+<div class="goplay-container"></div>

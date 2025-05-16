@@ -29,7 +29,7 @@ body {
   margin-top: 8px;
 }
 .goplay-run {
-  margin-right: 5px;
+  /* margin-right: 5px; */
 }
 .goplay-output .stderr {
   color: #b50000;

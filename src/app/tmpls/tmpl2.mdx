@@ -1,0 +1,16 @@
+# Golang: I/O 模板 2 - Scanner
+```go
+func main() {
+	// 不确定输入行数，推荐
+	sc := bufio.NewScanner(os.Stdin)
+	w := bufio.NewWriter(os.Stdout)
+	defer w.Flush()
+
+	for sc.Scan() {
+		line := sc.Text()
+		// 处理每一行
+		fmt.Fprintln(w, line)
+	}
+}
+```
+<div class="goplay-container"></div>

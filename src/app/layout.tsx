@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Golang 输入/输出 模板",
+  title: "I/O 模板",
   description: "",
 };
 

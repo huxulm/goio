@@ -1,0 +1,27 @@
+# Golang: I/O 模板 1 - ReadString('\n') 
+```go
+import (
+    "bufio"
+    "os"
+    "strings"
+    "fmt"
+)
+func main() {
+	r := bufio.NewReader(os.Stdin)
+	w := bufio.NewWriter(os.Stdout)
+
+	defer w.Flush()
+
+	// 行数不确定的输入处理
+	for {
+		line, err := r.ReadString('\n')
+		if err != nil {
+			break // EOF 退出
+		}
+		line = strings.TrimSpace(line)
+		// 处理每一行
+		fmt.Fprintln(w, line)
+	}
+}
+```
+<div class="goplay-container"></div>

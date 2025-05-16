@@ -1,0 +1,12 @@
+# Golang: 通用 I/O 模板 4 - 读取浮点数
+```go
+func getF() float64 {
+	sc.Scan()
+	i, e := strconv.ParseFloat(sc.Text(), 64)
+	if e != nil {
+		panic(e)
+	}
+	return i
+}
+```
+<div class="goplay-container"></div>
